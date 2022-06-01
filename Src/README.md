@@ -1,4 +1,5 @@
 # Orangy's InfluxMonitor package.
+
 This is Orangy's official package to forward the bot's stats to an InfluxDB instance.
 
 :white_check_mark: Easy to use
@@ -6,9 +7,11 @@ This is Orangy's official package to forward the bot's stats to an InfluxDB inst
 :white_check_mark: Open source
 
 # Available monitoring modes
+
 :white_check_mark: AutoMonitor (sends stats every minute)
 
 ## How to use
+
 ```
 //CommonJS:
 import Discord from "discord.js";

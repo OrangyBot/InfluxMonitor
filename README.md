@@ -13,7 +13,7 @@ This is Orangy's official package to forward the bot's stats to an InfluxDB inst
 ## How to use
 
 ```javascript
-//CommonJS:
+//ES6:
 import Discord from "discord.js";
 import OrangyMonitor from "@orangybot/influxmonitor";
 

@@ -13,7 +13,7 @@ export default async function AutoMonitor(
   setInterval(async () => {
     const WriteApi = InfluxClient.getWriteApi(Org, Bucket);
     WriteApi.useDefaultTags({ Service: Service });
-    if (Client) await DiscordHelper(WriteApi, Client);
+    await DiscordHelper(WriteApi, Client);
 
     await currentLoad().then(async (Data: any) => {
       const CPUUsagePoint = new Point("CPUUsage").floatField(

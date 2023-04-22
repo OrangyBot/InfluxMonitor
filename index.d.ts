@@ -1,5 +1,5 @@
 declare module "@orangybot/influxmonitor" {
-  interface OrangyMonitor {
+  export class OrangyMonitor {
     constructor(
       Type: string,
       Url: string,

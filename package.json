@@ -1,6 +1,6 @@
 {
   "name": "@orangybot/influxmonitor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Orangy's components monitor",
   "main": "OrangyMonitor/Index.js",
   "scripts": {

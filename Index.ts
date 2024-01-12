@@ -1,2 +1,2 @@
 import { OrangyMonitor } from "./Loader";
-export = OrangyMonitor;
+export { OrangyMonitor };

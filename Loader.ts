@@ -11,7 +11,7 @@ export class OrangyMonitor {
     Client: Client
   ) {
     if (!Url || !Token || !Bucket || !Org || !Service || !Client) {
-      console.log("[OrangyMonitor] One or more arguments are missing!");
+      console.log("[IM] One or more arguments are missing!");
       process.exit(1);
     }
     Loader.Start(Url, Token, Bucket, Org, Service, Client);

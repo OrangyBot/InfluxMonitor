@@ -22,11 +22,11 @@ const Client = new Discord.Client({ intents: ["GUILDS"] });
 
 //Start the monitor
 new OrangyMonitor(
-    "your InfluxDB URL",
-    "your InfluxDB token",
+    "Your InfluxDB URL",
+    "Your InfluxDB token",
     "your InfluxDB bucket",
-    "your InfluxDB org",
-    "This service's name (could be anything, like your bot's name)",
+    "Your InfluxDB org",
+    "This service's name (could be pretty much anything, such as your bot's name)",
     Client //Discord client object
 );
 
@@ -42,11 +42,11 @@ const Client = new Discord.Client({ intents: ["GUILDS"] });
 
 //Start the monitor
 new OrangyMonitor(
-    "your InfluxDB URL",
-    "your InfluxDB token",
-    "your InfluxDB bucket",
-    "your InfluxDB org",
-    "This service's name (could be anything, like your bot's name)",
+    "Your InfluxDB URL",
+    "Your InfluxDB token",
+    "Your InfluxDB bucket",
+    "Your InfluxDB org",
+    "This service's name (could be pretty much anything, such as your bot's name)",
     Client //Discord client object
 );
 

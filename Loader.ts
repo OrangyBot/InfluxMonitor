@@ -8,12 +8,13 @@ export class OrangyMonitor {
     Bucket: string,
     Org: string,
     Service: string,
+    Interval: number,
     Client: Client
   ) {
-    if (!Url || !Token || !Bucket || !Org || !Service || !Client) {
+    if (!Url || !Token || !Bucket || !Org || !Service || (!Interval || isNaN(Interval)) || !Client) {
       console.log("[IM] One or more arguments are missing!");
       process.exit(1);
-    }
-    Loader.Start(Url, Token, Bucket, Org, Service, Client);
+    } else if(Interval < 1000) Interval = 1000;
+    Loader.Start(Url, Token, Bucket, Org, Service, Interval, Client);
   }
 }

@@ -1,7 +1,7 @@
-import { InfluxDB } from "@influxdata/influxdb-client";
+import { InfluxDBClient } from "@influxdata/influxdb3-client";
 
-export let InfluxClient: InfluxDB;
+export let InfluxClient: InfluxDBClient;
 
 export default async function Data(Url: string, Token: string): Promise<void> {
-  InfluxClient = new InfluxDB({ url: Url, token: Token });
+  InfluxClient = new InfluxDBClient({ host: Url, token: Token });
 }

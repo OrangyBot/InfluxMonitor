@@ -9,9 +9,10 @@ export default class OrangyMonitor {
     Bucket: string,
     Org: string,
     Service: string,
+    Interval: number,
     Client: Client
   ) {
     await Data(Url, Token);
-    AutoMonitor(InfluxClient, Bucket, Org, Service, Client);
+    AutoMonitor(InfluxClient, Bucket, Org, Service, Interval, Client);
   }
 }

@@ -7,6 +7,7 @@ declare module "@orangybot/influxmonitor" {
       Bucket: string,
       Org: string,
       Service: string,
+      Interval: number,
       Client: Client
     ): void;
   }

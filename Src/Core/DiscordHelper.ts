@@ -1,8 +1,9 @@
-import { Point, WriteApi } from "@influxdata/influxdb-client";
+import { Point } from "@influxdata/influxdb3-client";
+import { InfluxClient } from "./InfluxClient";
 import { Client } from "discord.js";
 
 export default async function DiscordHelper(
-  WriteApi: WriteApi,
+  Service: string,
   Client: Client
 ): Promise<void> {
   let Shards: number = 1;
@@ -15,19 +16,19 @@ export default async function DiscordHelper(
       break;
   }
 
-  const TotalUsers = new Point("Users").floatField(
+  const TotalUsers = Point.measurement("Users").setFloatField(
     "Value",
     Client.users.cache.size
   );
-  const TotalGuilds = new Point("Guilds").floatField(
+  const TotalGuilds = Point.measurement("Guilds").setFloatField(
     "Value",
     Client.guilds.cache.size
   );
-  const TotalPing = new Point("Ping").floatField("Value", Client.ws.ping);
-  const TotalShards = new Point("Shards").floatField("Value", Shards);
+  const TotalPing = Point.measurement("Ping").setFloatField("Value", Client.ws.ping);
+  const TotalShards = Point.measurement("Shards").setFloatField("Value", Shards);
 
-  WriteApi.writePoint(TotalUsers);
-  WriteApi.writePoint(TotalGuilds);
-  WriteApi.writePoint(TotalPing);
-  WriteApi.writePoint(TotalShards);
+  await InfluxClient.write(TotalUsers, Service);
+  await InfluxClient.write(TotalGuilds, Service);
+  await InfluxClient.write(TotalPing, Service);
+  await InfluxClient.write(TotalShards, Service);
 }

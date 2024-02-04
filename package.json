@@ -19,13 +19,13 @@
   },
   "homepage": "https://github.com/OrangyBot/InfluxMonitor#readme",
   "devDependencies": {
-    "@types/node": "^20.11.0",
-    "prettier": "^3.1.1"
+    "@types/node": "^20.11.16",
+    "prettier": "^3.2.5"
   },
   "dependencies": {
-    "@influxdata/influxdb3-client": "^0.5.0",
+    "@influxdata/influxdb3-client": "^0.6.0",
     "discord.js": "^14.14.1",
-    "systeminformation": "^5.21.22",
+    "systeminformation": "^5.21.24",
     "typescript": "^5.3.3"
   }
 }

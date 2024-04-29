@@ -1,6 +1,6 @@
 {
   "name": "@orangybot/influxmonitor",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Orangy's components monitor",
   "main": "OrangyMonitor/Index.js",
   "scripts": {
@@ -19,13 +19,13 @@
   },
   "homepage": "https://github.com/OrangyBot/InfluxMonitor#readme",
   "devDependencies": {
-    "@types/node": "^20.11.16",
+    "@types/node": "^20.12.7",
     "prettier": "^3.2.5"
   },
   "dependencies": {
-    "@influxdata/influxdb3-client": "^0.6.0",
+    "@influxdata/influxdb3-client": "^0.8.0",
     "discord.js": "^14.14.1",
-    "systeminformation": "^5.21.24",
-    "typescript": "^5.3.3"
+    "systeminformation": "^5.22.7",
+    "typescript": "^5.4.5"
   }
 }
